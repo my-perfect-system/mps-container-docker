@@ -101,7 +101,7 @@ Required repository secrets (Settings → Secrets and variables → Actions):
 ## Documentation
 
 - [`AGENTS.md`](AGENTS.md) — design notes + conventions
-- `manage/AGENTS.md` — cross-collection conventions
+- `../my-perfect-system-ansible/playbook-example/AGENTS.md` — cross-collection conventions
 
 ## License
 

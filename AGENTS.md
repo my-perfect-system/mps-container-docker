@@ -70,8 +70,9 @@ the local ansible provider. Result: a pre-baked system image.
 ## Justfile
 
 `build` (docker compose build), `run [playbook]` (bash or re-apply a
-playbook via `/entrypoint.sh`), `shell`, `config`, `up`/`down`. The former
-`docker-{build,run,shell}` targets of `manage/Justfile` moved here.
+playbook via `/entrypoint.sh`), `shell`, `config`, `up`/`down`. The
+`docker-{build,run,shell}` targets moved here from the retired `manage`
+repo's Justfile.
 
 ## CI
 
@@ -81,5 +82,5 @@ playbook via `/entrypoint.sh`), `shell`, `config`, `up`/`down`. The former
 
 ## Cross-references
 
-- `manage/AGENTS.md` — collections, conventions, publishing path
+- `../my-perfect-system-ansible/playbook-example/AGENTS.md` — collections, conventions, publishing path
 - `playbook-example/` — the playbook/inventory repo the image clones

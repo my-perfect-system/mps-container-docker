@@ -1,6 +1,6 @@
 ---
 # odem.* collections installed at image build time from the PUBLIC GitHub
-# repos (git links — Galaxy publishing is pending, see manage/AGENTS.md
+# repos (git links — Galaxy publishing is pending, see the playbook-example
 # "Publishing path to Galaxy"). Each repo root carries its galaxy.yml.
 # Galaxy dependencies (ansible.posix, community.general, community.crypto)
 # install separately in the Dockerfile.
