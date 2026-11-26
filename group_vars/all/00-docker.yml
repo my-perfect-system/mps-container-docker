@@ -30,7 +30,7 @@ user_roles_default:
   desktop_qtile: true
   desktop_thunar: true
   desktop_kanata: true
-  backup_backup: true
+  os_backup: true
   development_opencode: true
   development_lmstudio: true
   development_espidf: true

@@ -10,6 +10,5 @@ collections:
   - name: git+https://github.com/my-perfect-system-ansible/odem-development.git
   - name: git+https://github.com/my-perfect-system-ansible/odem-desktop.git
   - name: git+https://github.com/my-perfect-system-ansible/odem-hardening.git
-  - name: git+https://github.com/my-perfect-system-ansible/odem-backup.git
   - name: git+https://github.com/my-perfect-system-ansible/odem-services.git
   - name: git+https://github.com/my-perfect-system-ansible/odem-alloy.git
