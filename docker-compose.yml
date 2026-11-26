@@ -1,0 +1,40 @@
+name: mps
+
+services:
+  mps:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        ANSIBLE_VERSION: 2.21.3
+        JUST_VERSION: 1.36.0
+        PLAYBOOK_REPO: https://github.com/my-perfect-system-ansible/playbook-example.git
+        PLAYBOOK_REF: main
+    image: mps
+    container_name: mps
+    init: true
+    privileged: true
+    cap_add:
+      - SYS_ADMIN
+      - NET_ADMIN
+    security_opt:
+      - apparmor:unconfined
+    volumes:
+      - type: bind
+        source: /sys/fs/cgroup
+        target: /sys/fs/cgroup
+        read_only: false
+      # Mount your own group_vars override on top of the bundled one:
+      # - ./my-users.yml:/opt/playbook-example/inventories/home/group_vars/all/00-docker.yml:ro
+    tmpfs:
+      - /run
+      - /tmp
+      - /var/log
+    working_dir: /opt/playbook-example/inventories/home
+    # No entrypoint/command override — use Dockerfile's CMD (tail -f /dev/null).
+    # Override at runtime: docker compose exec mps bash
+    environment:
+      DEBIAN_FRONTEND: noninteractive
+      ANSIBLE_NOCOWS: "1"
+      ANSIBLE_CALLBACK_RESULT_FORMAT: yaml
+      ANSIBLE_CALLBACK_FORMAT_PRETTY: "0"

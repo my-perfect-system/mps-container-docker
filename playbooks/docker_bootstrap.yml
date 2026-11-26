@@ -1,0 +1,12 @@
+---
+- name: Bootstrap hosts (docker variant)
+  hosts: all
+  become: true
+
+  roles:
+    # identity model FIRST (user creation before the systemd-locked steps so
+    # /home/admin exists when the terminal roles deploy per-user dotfiles)
+    - odem.os.user
+    - odem.os.settings
+    - odem.os.packages
+    - odem.os.tools

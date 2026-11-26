@@ -1,0 +1,15 @@
+---
+# odem.* collections installed at image build time from the PUBLIC GitHub
+# repos (git links — Galaxy publishing is pending, see manage/AGENTS.md
+# "Publishing path to Galaxy"). Each repo root carries its galaxy.yml.
+# Galaxy dependencies (ansible.posix, community.general, community.crypto)
+# install separately in the Dockerfile.
+collections:
+  - name: git+https://github.com/my-perfect-system-ansible/odem-os.git
+  - name: git+https://github.com/my-perfect-system-ansible/odem-terminal.git
+  - name: git+https://github.com/my-perfect-system-ansible/odem-development.git
+  - name: git+https://github.com/my-perfect-system-ansible/odem-desktop.git
+  - name: git+https://github.com/my-perfect-system-ansible/odem-hardening.git
+  - name: git+https://github.com/my-perfect-system-ansible/odem-backup.git
+  - name: git+https://github.com/my-perfect-system-ansible/odem-services.git
+  - name: git+https://github.com/my-perfect-system-ansible/odem-alloy.git
